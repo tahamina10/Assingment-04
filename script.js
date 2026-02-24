@@ -23,3 +23,24 @@ const jobs = [
     { companyName: "StartupXYZ", position: "Full Stack Engineer", location: "Remote • Full-time • $120,000 - $160,000", state:"Not Applied", description:"Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included."},
     { companyName: "TechCorp Industries", position: "Senior Frontend Developer", location: "San Francisco, CA • Full-time • $130,000 - $175,000", state:"Not Applied", description:"We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects."},
 ];
+function Cards(list, container){
+    container.innerHTML = '';
+    for (const job of list) {
+        const div = document.createElement('div');
+        div.className = 'card border border-base-200 shadow bg-base-100 p-4 flex justify-between flex-row';
+        div.innerHTML = `
+        <div class="left space-y-6">
+            <p class="companyName text-2xl font-bold text-[#002C5C] mb-1">${job.companyName}</p>
+            <p class="position text-[#64748B] mb-1">${job.position}</p>
+            <p class="location text-[#64748B] mb-2">${job.location}</p>
+            <p class="state border border-base-200 rounded w-[120px] py-2 text-center bg-base-200 text-[#002C5C] mb-2">${job.state}</p>
+            <p class="description text-[#002C5C]">${job.description}</p>
+            <div>
+                <button class="interview-btn btn border-green-500 text-green-600 no-underline">Interview</button>
+                <button class="rejected-btn btn border-red-500 text-red-600 no-underline">Rejected</button>
+            </div>
+        </div>
+        <button class="btn"><i class="delete-btn fa-solid fa-trash-can"></i></button>`;
+        container.appendChild(div);
+    }
+}
