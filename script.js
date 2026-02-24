@@ -31,8 +31,8 @@ function Cards(list, container){
         div.innerHTML = `
         <div class="left space-y-6">
             <p class="companyName text-2xl font-bold text-[#002C5C] mb-1">${job.companyName}</p>
-            <p class="position text-[#64748B] mb-1">${job.position}</p>
-            <p class="location text-[#64748B] mb-2">${job.location}</p>
+            <p class="position  text-[#64748B] mb-1">${job.position}</p>
+            <p class="location px-4 py-4 rounded inline-block  text-[#64748B] mb-2 self-start">${job.location}</p>
             <p class="state border border-base-200 rounded w-[120px] py-2 text-center bg-base-200 text-[#002C5C] mb-2">${job.state}</p>
             <p class="description text-[#002C5C]">${job.description}</p>
             <div>
