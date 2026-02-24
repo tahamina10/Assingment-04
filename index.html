@@ -37,7 +37,35 @@
 <br><br><hr class="border-t border-base-200 mb-4">
 </header>
 
+<main class="w-[80%] mx-auto">
+    <div class="flex flex-row justify-between">
+        <p class="text-2xl font-bold text-[#002C5C] mb-3">Available Jobs</p>
+        <p class="text-[#64748B]"> <span id="job-count">0</span> jobs</p>
+    </div>
+    <div class="mb-6 space-x-2">
+        <button class="filter-btn btn btn-primary p-5 px-8 text-white" id="all-filter-btn">All</button>
+        <button class="filter-btn btn p-5 text-[#64748B] bg-base-100" id="interview-filter-btn">Interview</button>
+        <button class="filter-btn btn p-5 text-[#64748B] bg-base-100" id="rejected-filter-btn">Rejected</button>
+    </div>
 
+   
+    <section id="allCards">
+        <div class="grid grid-cols-1 gap-4" id="card-container"></div>
+    </section>
+
+   
+    <section id="filter-section" class="hidden space-y-4"></section>
+
+    
+    <div id="no-jobs" class="border border-base-200 shadow bg-base-100 p-4 w[80%] text-center hidden">
+        <img src="./jobs.png" alt="" class="mx-auto">
+        <p class="text-2xl font-bold text-[#002C5C] mb-1">No jobs available</p>
+        <p class="text-[#64748B] mb-1">Check back soon for new job opportunities</p>
+    </div>
+    <br><br>
+</main>
+
+<script src="./script.js"></script>
 
 </body>
 </html>
